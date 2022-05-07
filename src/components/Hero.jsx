@@ -112,6 +112,7 @@ const Section = styled.section`
       button {
         padding: 1rem;
         cursor: pointer;
+        margin-left: 25px;
         border-radius: 0.3rem;
         border: none;
         color: white;
