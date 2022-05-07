@@ -7,6 +7,8 @@ import AddForm from './AddForm';
 
 export default function Navbar () {
   const [navbarState, setNavbarState] = useState(false);
+  const [openPopup, setOpenPopup] = useState(false);
+
     return (
         <>
             <Nav>
@@ -36,12 +38,19 @@ export default function Navbar () {
                     </li>
                     <li>
                         <a href="#testimonials">Testimonials</a>
-                    </li> 
+                    </li>
+                    <li>
+                        <a
+                        onClick={()=>setOpenPopup(true)}
+                        ><b>Connect</b></a>
+                    </li>
                 </ul>
 
-                <AddForm/>
-                
-            </Nav>   
+                <AddForm
+                openPopup={openPopup}
+                setOpenPopup={setOpenPopup}
+                />
+            </Nav>
 
             <ResponsiveNav state={navbarState}>
         <ul>
@@ -67,7 +76,7 @@ export default function Navbar () {
           </li>
         </ul>
       </ResponsiveNav>
-            
+    
         </>
     );
 }

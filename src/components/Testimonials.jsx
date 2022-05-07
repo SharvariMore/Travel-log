@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import avatarImage from "../assets/avatarImage.jpeg";
 import avatarImage1 from "../assets/avatarImage1.jpg";
 import avatarImage2 from "../assets/avatarImage2.jpg";
 import avatarImage3 from "../assets/avatarImage3.jpg";
@@ -52,7 +51,6 @@ export default function Testimonials() {
       </div>
     </Section>
     );
-    
 }
 
 const Section = styled.section`
