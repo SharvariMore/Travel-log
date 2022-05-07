@@ -4,11 +4,12 @@ import logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import AddForm from './AddForm';
+import Connect from './Connect';
 
 export default function Navbar () {
   const [navbarState, setNavbarState] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
-
+  const [popUp, setPopUp] = useState(false);
     return (
         <>
             <Nav>
@@ -40,15 +41,21 @@ export default function Navbar () {
                         <a href="#testimonials">Testimonials</a>
                     </li>
                     <li>
-                        <a
-                        onClick={()=>setOpenPopup(true)}
-                        ><b>Connect</b></a>
+                        <a onClick={()=>setOpenPopup(true)}><b>Register</b></a>
+                    </li>
+                    <li>
+                        <a onClick={()=>setPopUp(true)}><b>Connect</b></a>
                     </li>
                 </ul>
 
                 <AddForm
                 openPopup={openPopup}
                 setOpenPopup={setOpenPopup}
+                />
+
+                <Connect
+                popUp={popUp}
+                setPopUp={setPopUp}
                 />
             </Nav>
 
@@ -107,11 +114,15 @@ const Nav = styled.nav`
     li {
       a {
         text-decoration: none;
+        cursor: pointer;
         color: #0077b6;
         font-size: 1.2rem;
         transition: 0.1s ease-in-out;
         &:hover {
           color: #023e8a;
+        }
+        #register {
+          border: bold;
         }
       }
       &:first-of-type {
@@ -191,4 +202,5 @@ const ResponsiveNav = styled.div`
     }
   }
 `;
+
 
