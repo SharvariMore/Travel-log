@@ -81,6 +81,12 @@ export default function Navbar () {
               Testimonials
             </a>
           </li>
+          <li>
+            <a onClick={()=>setOpenPopup(true)}><b>Register</b></a>
+          </li>
+          <li>
+            <a onClick={()=>setPopUp(true)}><b>Connect</b></a>
+          </li>
         </ul>
       </ResponsiveNav>
     
@@ -202,5 +208,4 @@ const ResponsiveNav = styled.div`
     }
   }
 `;
-
 
