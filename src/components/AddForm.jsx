@@ -2,14 +2,22 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import { Dialog, DialogTitle, DialogContent } from "@material-ui/core";
 import './AddForm.css';
+import emailjs from "emailjs-com";
 
 export default function AddForm({openPopup, setOpenPopup}) {
 
-    const handleSubmit = (e) => {
+    function sendEmail(e) {
         e.preventDefault();
-        window.alert("Submitted Successfully!");
+
+        emailjs.sendForm('gmail', 'template_d4dcijs', e.target, 'BSXJF-kNz4yuSrMGQ')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        window.alert("Details Submitted Successfully!");
         e.target.reset();
-    };
+    }
 
 
     return (
@@ -19,46 +27,46 @@ export default function AddForm({openPopup, setOpenPopup}) {
                 <i><span style={{color: 'red'}}>Note</span>: We will get back to you through phone & email.</i>
             </DialogTitle>
             <DialogContent className="content">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={sendEmail}>
                     <div className="container">
                         <div className="left">
                             <div>
                                 <label>First Name: </label>
-                                <input type="text" placeholder="Enter First Name" required></input>
+                                <input type="text" placeholder="Enter First Name" name="first name" required></input>
                             </div>
                             <div>
                                 <label>Last Name: </label>
-                                <input type="text" placeholder="Enter Last Name" required></input>
+                                <input type="text" placeholder="Enter Last Name" name="last name" required></input>
                             </div>
                             <div>
                                 <label>Contact No: </label>
-                                <input type="number" placeholder="Enter contact no" required></input>
+                                <input type="number" placeholder="Enter contact no" name="contact" required></input>
                             </div>
                             <div>
                                 <label>Email-id: </label>
-                                <input type="email" placeholder="Enter email id" required></input>
+                                <input type="email" placeholder="Enter email id" name="email-id" required></input>
                             </div>
                             <div>
                                 <label>Enter No. of Persons: </label>
-                                <input type="number" placeholder="Enter no. of persons" required></input>
+                                <input type="number" placeholder="Enter no. of persons" name="total persons" required></input>
                             </div>
                         </div>
                         <div className="right">
                             <div>
                                 <label>Country: </label>
-                                <input type="text" placeholder="Enter your country" required></input>
+                                <input type="text" placeholder="Enter your country" name="country" required></input>
                             </div>
                             <div>
                                 <label>City: </label>
-                                <input type="text" placeholder="Enter your city" required></input>
+                                <input type="text" placeholder="Enter your city" name="city" required></input>
                             </div>
                             <div>
                                 <label>Enter No. of Days: </label>
-                                <input type="number" placeholder="Enter no. of days" required></input>
+                                <input type="number" placeholder="Enter no. of days" name="total days" required></input>
                             </div>
                             <div>
                                 <label>Select Cars: </label>
-                                <select>
+                                <select name="car name">
                                     <option>Select Car </option>
                                     <option>Swift Dzire</option>
                                     <option>Ertiga</option>
@@ -70,7 +78,7 @@ export default function AddForm({openPopup, setOpenPopup}) {
                             </div>
                             <div>
                                 <label>Select Car Type: </label>
-                                <select>
+                                <select name="car type">
                                     <option>Select Type </option>
                                     <option>AC</option>
                                     <option>NON-AC</option>
@@ -85,5 +93,6 @@ export default function AddForm({openPopup, setOpenPopup}) {
         </Dialog>
     );
 }
+
 
 
