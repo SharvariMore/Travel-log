@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
-import homeImage from '../assets/hero.png'
+import homeImage from '../assets/hero.png';
+import emailjs from 'emailjs-com';
+import AddForm from './AddForm';
 
 export default function Hero() {
-  const exploreDest = () => {
-    window.alert("Congrats! Dates are available.");
+
+  function getValue() {
+    var retVal = prompt("Enter your name : ", "your name here");
+    document.write("You have entered : " + retVal);
+ }
+
+  const form = useRef();
+
+  const exploreDest = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_rn86iqs', 'template_dwo37rs', form.current, 'BSXJF-kNz4yuSrMGQ')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    window.alert("We'll get back to you with Date availability through email.");
+    e.target.reset();
   }
   
     return (
@@ -20,22 +38,30 @@ export default function Hero() {
                   Let's Embark a New Journey to Start Upon! 
                 </p>  
               </div>
+              <form ref={form} onSubmit={exploreDest}>
               <div className="search">
                   <div className="container">
                       <label htmlFor="">Where You Want To Go?</label>
-                      <input type="text" placeholder="Search Your Location"/>
+                      <input type="text" placeholder="Search Your Location" name="place" required/>
                   </div>
                   <div className="container">
                       <label htmlFor="">Check-In</label>
-                      <input type="date"/>
+                      <input type="date" name="from date" required/>
                   </div>
                   <div className="container">
                       <label htmlFor="">Check-Out</label>
-                      <input type="date" />
+                      <input type="date" name="to date" required/>
                   </div>
-                   <button onClick={exploreDest}>Explore Now!</button>
+                  <div className="container">
+                      <input type="email" placeholder="Enter your email id here " name="email-id" onclick={getValue} required/>
+                  </div>
+                   <button type="submit">Explore Now!</button>
+
               </div>
+              <AddForm />
+              </form>
           </div>
+          
         </Section>    
     </>
     );
@@ -162,5 +188,7 @@ const Section = styled.section`
     }
   }
 `;
+
+
 
 
