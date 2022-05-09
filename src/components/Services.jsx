@@ -11,25 +11,25 @@ export default function Services () {
           icon: service1,
           title: "Get Best Prices",
           subTitle:
-            "Pay through our application and save thousands and get amazing rewards.",
+            "Book through our application and save thousands and get amazing rewards.",
         },
         {
           icon: service2,
           title: "Covid Safe",
           subTitle:
-            "We have all the curated hotels that have all the precaution for a covid safe environment.",
+            "We have all the curated cars that have all the precaution for a covid safe environment.",
         },
         {
           icon: service3,
           title: "Flexible Payment",
           subTitle:
-            " Enjoy the flexible payment through our app and get rewards on every payment.",
+            " Enjoy the flexible payment methods and get rewards on every payment.",
         },
         {
           icon: service4,
           title: "Find The Best Near You",
           subTitle:
-            "Find the best hotels and places to visit near you in a single click.",
+            "Find the best hotels and places to visit near you in a single go.",
         },
       ];
     return (
@@ -64,7 +64,7 @@ const Section = styled.section`
     background-color: aliceblue;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.3s ease-in-out;
-    &:hover {
+      {
       transform: translateX(0.4rem) translateY(-1rem);
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
@@ -81,4 +81,5 @@ const Section = styled.section`
     grid-template-columns: repeat(2, 1fr);
   }
 `;
+
 
