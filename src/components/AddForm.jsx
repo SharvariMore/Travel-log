@@ -1,15 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import styled from "styled-components";
 import { Dialog, DialogTitle, DialogContent } from "@material-ui/core";
 import './AddForm.css';
 import emailjs from "emailjs-com";
 
 export default function AddForm({openPopup, setOpenPopup}) {
+    const form = useRef();
 
-    function sendEmail(e) {
+    const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('gmail', 'template_d4dcijs', e.target, 'BSXJF-kNz4yuSrMGQ')
+        emailjs.sendForm('service_rn86iqs', 'template_d4dcijs', form.current, 'BSXJF-kNz4yuSrMGQ')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -26,8 +27,9 @@ export default function AddForm({openPopup, setOpenPopup}) {
                 <h1 className="title">Submit Data for Enquiry</h1>
                 <i><span style={{color: 'red'}}>Note</span>: We will get back to you through phone & email.</i>
             </DialogTitle>
+            
             <DialogContent className="content">
-                <form onSubmit={sendEmail}>
+                <form ref={form} onSubmit={sendEmail}>
                     <div className="container">
                         <div className="left">
                             <div>
@@ -88,11 +90,15 @@ export default function AddForm({openPopup, setOpenPopup}) {
                     </div>
                     <button type="submit">Submit</button>
                     <button type="cancel" onClick={() => setOpenPopup(false)}>Cancel</button>
+                
                 </form>
             </DialogContent>
+            
         </Dialog>
     );
 }
+
+
 
 
 
