@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import homeImage from '../assets/hero.png';
 import emailjs from 'emailjs-com';
 import AddForm from './AddForm';
+import { Tooltip } from '@material-ui/core';
 
 export default function Hero() {
 
@@ -21,7 +22,7 @@ export default function Hero() {
         }, (error) => {
             console.log(error.text);
         });
-    window.alert("We'll get back to you with Date availability through email.");
+    window.alert("Dates Submitted Successfully!");
     e.target.reset();
   }
   
@@ -55,7 +56,11 @@ export default function Hero() {
                   <div className="container">
                       <input type="email" placeholder="Enter your email id here " name="email-id" onclick={getValue} required/>
                   </div>
+                   
+                  <Tooltip title={<h4>Check Date Availability & then Register for Booking</h4>} arrow>
                    <button type="submit">Explore Now!</button>
+                  </Tooltip>
+                    
 
               </div>
               <AddForm />
@@ -79,6 +84,7 @@ const Section = styled.section`
       filter: brightness(60%);
     }
   }
+  
   .content {
     height: 100%;
     width: 100%;
@@ -188,6 +194,8 @@ const Section = styled.section`
     }
   }
 `;
+
+
 
 
 
