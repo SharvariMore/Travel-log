@@ -28,7 +28,7 @@ import scrollreveal from "scrollreveal";
         `,
       {
         opacity: 0,
-        interval: 150,
+        interval: 120,
       }
     );
   }, []);
