@@ -182,11 +182,12 @@ const Nav = styled.nav`
 const ResponsiveNav = styled.div`
   display: flex;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: ${({ state }) => (state ? "50px" : "-400px")};
   background-color: white;
-  height: 30vh;
+  height: 50vh;
   width: 100%;
+  margin-top: 5.2rem;
   align-items: center;
   transition: 0.3s ease-in-out;
   ul {
