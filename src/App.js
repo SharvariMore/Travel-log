@@ -14,7 +14,7 @@ import scrollreveal from "scrollreveal";
     const sr = scrollreveal({
       origin: "top",
       distance: "80px",
-      duration: 2000,
+      
       reset: true, 
     });
     sr.reveal(
@@ -28,7 +28,7 @@ import scrollreveal from "scrollreveal";
         `,
       {
         opacity: 0,
-        interval: 120,
+        interval: 10,
       }
     );
   }, []);
