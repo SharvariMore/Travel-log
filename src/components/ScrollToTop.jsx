@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import logo from "../assets/logo.png";
+import Viklogo from "../assets/Viklogo.png";
 
 export default function ScrollToTop() {
     const [scrollState, setScrollState] = useState(false);
@@ -16,7 +16,7 @@ export default function ScrollToTop() {
     return (
     <>
         <ToTop scrollState={scrollState} onClick={toTop}>
-            <img src={logo} alt="" />
+            <img src={Viklogo} alt="logo" />
         </ToTop>
     </>
     );
