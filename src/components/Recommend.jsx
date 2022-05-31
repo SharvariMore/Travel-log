@@ -6,6 +6,12 @@ import Destination3 from "../assets/Ajanta-and-Ellora-Caves.jpg";
 import Destination4 from "../assets/Lonavala.jpg";
 import Destination5 from "../assets/Matheran.jpg";
 import Destination6 from "../assets/kolhapur.jpg";
+import Destination7 from "../assets/Shirdi.jpg";
+import Destination8 from "../assets/Solapur.jpg";
+import Destination9 from "../assets/sangli.jpg";
+import Destination10 from "../assets/Mahabaleshwar.jpg";
+import Destination11 from "../assets/Ratnagiri.jpg";
+import Destination12 from "../assets/Nashik.jpeg";
 import info1 from "../assets/info1.png";
 import info2 from "../assets/info2.png";
 import info3 from "../assets/info3.png";
@@ -24,7 +30,7 @@ export default function Recommend() {
           image: Destination2,
           title: "Mumbai",
           subTitle: "Mumbai being the capital of Maharashtra is a cosmopolitan metropolis city",
-          cost: "1500 Rs",
+          cost: "1000 Rs",
           duration: "Approx 1 night trip",
           distance: "154 Kms",
         },
@@ -32,33 +38,81 @@ export default function Recommend() {
           image: Destination3,
           title: "Ajanta - Ellora Caves",
           subTitle: "This Caves located near Aurangabad are the rock-cut caves that define Buddhist, Jain and Hindu monuments",
-          cost: "2000 Rs",
-          duration: "Approx 3 night trip",
-          distance: "432 Kms",
+          cost: "1200 Rs",
+          duration: "Approx 2 night trip",
+          distance: "258 Kms",
         },
         {
           image: Destination4,
           title: "Lonavala",
           subTitle: "Lonavala, a famous hill station also known as 'Jewel of Sahayadri' includes stunning waterfalls",
-          cost: "1200 Rs",
+          cost: "1000 Rs",
           duration: "Approx 1 night trip",
-          distance: "83 Kms",
+          distance: "64 Kms",
         },
         {
           image: Destination5,
           title: "Matheran",
           subTitle: "Matheran, being the smallest hill station famous for trekking, rock climbing etc",
-          cost: "1800 Rs",
-          duration: "Approx 3 night trip",
-          distance: "83 Kms",
+          cost: "1100 Rs",
+          duration: "Approx 1 night trip",
+          distance: "119 Kms",
         },
         {
           image: Destination6,
           title: "Kolhapur",
           subTitle: "Kolhapur, being a historical & spiritual base is known for it's temples, spices etc",
-          cost: "1400 Rs",
+          cost: "1100 Rs",
           duration: "Approx 2 night trip",
-          distance: "375 Kms",
+          distance: "233 Kms",
+        },
+        {
+          image: Destination7,
+          title: "Shirdi",
+          subTitle: "Shirdi, being a major pilgrimage site is former home of revered spiritual leader Sai Baba",
+          cost: "1200 Rs",
+          duration: "Approx 1 night trip",
+          distance: "184 Kms",
+        },
+        {
+          image: Destination8,
+          title: "Solapur",
+          subTitle: "Solapur, is a spiritual quest developed as a commercial center for cotton and other agricultural produce",
+          cost: "1200 Rs",
+          duration: "Approx 2 night trip",
+          distance: "254 Kms",
+        },
+        {
+          image: Destination9,
+          title: "Sangli",
+          subTitle: "Sangli, being the lifeline of Krishna river is known as the Turmeric city and the Sugar Belt of India",
+          cost: "1100 Rs",
+          duration: "Approx 2 night trip",
+          distance: "233 Kms",
+        },
+        {
+          image: Destination10,
+          title: "Mahabaleshwar",
+          subTitle: "Mahabaleshwar, a hill station in Western Ghats is famous for its Strawberries, Mulberries and carrots",
+          cost: "900 Rs",
+          duration: "Approx 1 night trip",
+          distance: "120 Kms",
+        },
+        {
+          image: Destination11,
+          title: "Ratnagiri",
+          subTitle: "Ratnagiri, a port town in Maharashtra famous for its scenic beaches & mangoes",
+          cost: "1200 Rs",
+          duration: "Approx 2 night trip",
+          distance: "303 Kms",
+        },
+        {
+          image: Destination12,
+          title: "Nashik",
+          subTitle: "Nashik, being a ancient holy city in Maharashtra is perfect wine tasting destination",
+          cost: "1100 Rs",
+          duration: "Approx 2 night trip",
+          distance: "211 Kms",
         },
       ];
     
@@ -103,7 +157,7 @@ export default function Recommend() {
                                     <img src={info2} alt="" />
                                     <img src={info3} alt="" />
                                 </div>
-                                <h4>{destination.cost}</h4>
+                                
                             </div>
                             <div className="distance">
                                 <span>{destination.distance}</span>
@@ -113,7 +167,7 @@ export default function Recommend() {
                         );
                     })}
                 </div>
-            
+            <h4>& Many More...</h4>
         </Section>
     </>
     );
@@ -188,6 +242,14 @@ const Section = styled.section`
       }
     }
   }
+
+  h4{
+    font-size: 20px;
+    color: purple;
+    margin-left: 1270px;
+    margin-bottom: 5px;
+  }
+
   @media screen and (min-width: 280px) and (max-width: 768px) {
     .packages {
       ul {
@@ -205,5 +267,15 @@ const Section = styled.section`
       grid-template-columns: 1fr;
       padding: 0;
     }
+
+    h4{
+      font-size: 12px;
+      color: purple;
+      margin-left: 150px;
+    }
   }
+
+  
 `;
+
+/*<h4>{destination.cost}</h4>*/
