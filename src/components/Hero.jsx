@@ -159,7 +159,7 @@ const Section = styled.section`
     }
   }
   @media screen and (min-width: 280px) and (max-width: 980px) {
-    height: 35rem;
+    height: 45rem;
     .background {
       background-color: palegreen;
       img {
