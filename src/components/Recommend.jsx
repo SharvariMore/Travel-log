@@ -271,7 +271,7 @@ const Section = styled.section`
     h4{
       font-size: 12px;
       color: purple;
-      margin-left: 150px;
+      margin-left: 350px;
     }
   }
 
