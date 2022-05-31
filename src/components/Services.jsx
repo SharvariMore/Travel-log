@@ -11,7 +11,7 @@ export default function Services () {
           icon: service1,
           title: "Get Best Prices",
           subTitle:
-            "Book through our application and save thousands and get amazing rewards.",
+            "Book through our application and save thousands and get amazing rides.",
         },
         {
           icon: service2,
@@ -23,7 +23,7 @@ export default function Services () {
           icon: service3,
           title: "Flexible Payment",
           subTitle:
-            " Enjoy the flexible payment methods and get rewards on every payment.",
+            " Enjoy the flexible payment options anytime & anywhere.",
         },
         {
           icon: service4,
@@ -81,5 +81,4 @@ const Section = styled.section`
     grid-template-columns: repeat(2, 1fr);
   }
 `;
-
 
