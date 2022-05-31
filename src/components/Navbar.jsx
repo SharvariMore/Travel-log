@@ -188,7 +188,7 @@ const ResponsiveNav = styled.div`
   top: ${({ state }) => (state ? "50px" : "-400px")};
   background-color: white;
   margin-top: 2.8rem;
-  height: 32vh;
+  height: 28vh;
   width: 100%;
   
   align-items: center;
