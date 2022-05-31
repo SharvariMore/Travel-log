@@ -14,7 +14,7 @@ import scrollreveal from "scrollreveal";
     const sr = scrollreveal({
       origin: "top",
       distance: "80px",
-      duration: 100,
+      
       reset: true, 
     });
     sr.reveal(
