@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import Viklogo from "../assets/Viklogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import AddForm from './AddForm';
@@ -16,7 +16,7 @@ export default function Navbar () {
             <Nav>
              <div className="brand">
                     <div className="container">
-                        <img src={logo} alt="" />
+                        <img src={Viklogo} alt="" width="30" height="30"/>
                         <h1>Vikram Travels</h1>
                     </div>
                         <div className="toggle">
@@ -108,9 +108,12 @@ const Nav = styled.nav`
       justify-content: center;
       align-items: center;
       gap: 0.4rem;
-      font-size: 1.2rem;
+      font-size: 2.0rem;
       font-weight: 900;
       text-transform: uppercase;
+      img{
+        border-radius: 8px; 
+      }
     }
     .toggle {
       display: none;
