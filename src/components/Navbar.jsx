@@ -186,9 +186,9 @@ const ResponsiveNav = styled.div`
   z-index: 2;
   top: ${({ state }) => (state ? "50px" : "-400px")};
   background-color: white;
-  height: 44vh;
+  height: 40vh;
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 2.8rem;
   align-items: center;
   transition: 0.3s ease-in-out;
   ul {
