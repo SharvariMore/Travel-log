@@ -159,10 +159,7 @@ export default function Recommend() {
                                 </div>
                                 
                             </div>
-                            <div className="distance">
-                                <span>{destination.distance}</span>
-                                
-                            </div>
+                           
                         </div>
                         );
                     })}
@@ -279,4 +276,7 @@ const Section = styled.section`
 `;
 
 /*<h4>{destination.cost}</h4>
-<span>{destination.duration}</span>*/
+<span>{destination.duration}</span>
+ <div className="distance">
+ <span>{destination.distance}</span>
+ </div>*/
