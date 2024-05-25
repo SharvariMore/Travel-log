@@ -6,6 +6,10 @@ import emailjs from "emailjs-com";
 
 export default function AddForm({openPopup, setOpenPopup}) {
     const form = useRef();
+    const [countryCode, setCountryCode] = useState("");
+    const [contact, setContact] = useState("");
+    const [days, setDays] = useState("");
+    const [person, setPerson] = useState("");
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -19,6 +23,39 @@ export default function AddForm({openPopup, setOpenPopup}) {
         window.alert("Details Submitted Successfully!");
         e.target.reset();
     }
+
+    const handleContactInput = (e) => {
+        let valc = e.target.value.replace(/\D/g, '');
+        if (valc.length > 10) {
+            valc = valc.slice(0, 10);
+        }
+        setContact(valc);
+    };
+
+    const handleCountryCodeChange = (e) => {
+        let value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+        if (value.length > 7) {
+            value = value.slice(0, 7);
+        }
+        setCountryCode(value);
+    };
+
+    const handleDays = (e) => {
+        let vald = e.target.value.replace(/\D/g, '');
+        if (vald.length > 5) {
+            vald = vald.slice(0, 5);
+        }
+        setDays(vald);
+    };
+
+    const handlePeople = (e) => {
+        let valp = e.target.value.replace(/\D/g, '');
+        if (valp.length > 10) {
+            valp = valp.slice(0, 10);
+        }
+        setPerson(valp);
+    };
+
 
 
     return (
@@ -42,7 +79,28 @@ export default function AddForm({openPopup, setOpenPopup}) {
                             </div>
                             <div>
                                 <label>Contact No: </label>
-                                <input type="number" placeholder="Enter contact no" name="contact" maxLength="10" required></input>
+                                <div style={{ display: 'flex' }}>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Code" 
+                                        name="country code" 
+                                        value={countryCode}
+                                        style={{ width: '30%' }} 
+                                        maxLength={8}
+                                        onChange={handleCountryCodeChange} 
+                                        required 
+                                    />
+                                    <input 
+                                        type="text" 
+                                        placeholder="Enter contact no" 
+                                        name="contact" 
+                                        value={contact}
+                                        onInput={handleContactInput} 
+                                        maxLength={10}
+                                        style={{ width: '70%' }} 
+                                        required 
+                                    />
+                                </div>
                             </div>
                             <div>
                                 <label>Email-id: </label>
@@ -50,7 +108,7 @@ export default function AddForm({openPopup, setOpenPopup}) {
                             </div>
                             <div>
                                 <label>Enter No. of Persons: </label>
-                                <input type="number" placeholder="Enter no. of persons" name="total persons" required></input>
+                                <input type="text" value={person} placeholder="Enter no. of persons" maxLength={10} name="total persons" onChange={handlePeople} required></input>
                             </div>
                         </div>
                         <div className="right">
@@ -64,10 +122,10 @@ export default function AddForm({openPopup, setOpenPopup}) {
                             </div>
                             <div>
                                 <label>Enter No. of Days: </label>
-                                <input type="number" placeholder="Enter no. of days" name="total days" required></input>
+                                <input type="text" value={days} placeholder="Enter no. of days" maxLength={5} name="total days" onChange={handleDays} required></input>
                             </div>
                             <div>
-                                <label>Select Cars: </label>
+                                <label>Select Car: </label>
                                 <select name="car name">
                                     <option>Select Car </option>
                                     <option>Swift Dzire</option>
@@ -97,8 +155,3 @@ export default function AddForm({openPopup, setOpenPopup}) {
         </Dialog>
     );
 }
-
-
-
-
-
