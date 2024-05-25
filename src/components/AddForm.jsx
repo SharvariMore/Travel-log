@@ -42,7 +42,7 @@ export default function AddForm({openPopup, setOpenPopup}) {
                             </div>
                             <div>
                                 <label>Contact No: </label>
-                                <input type="number" placeholder="Enter contact no" name="contact" required></input>
+                                <input type="number" placeholder="Enter contact no" name="contact" maxLength="10" required></input>
                             </div>
                             <div>
                                 <label>Email-id: </label>
