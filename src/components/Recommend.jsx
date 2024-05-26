@@ -164,7 +164,6 @@ export default function Recommend() {
                         );
                     })}
                 </div>
-            <h4>& Many More...</h4>
         </Section>
     </>
     );
