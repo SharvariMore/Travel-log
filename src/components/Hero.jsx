@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
-import homeImage from '../assets/hero.png';
+import homeImage from '../assets/khavann.jpg';
 import emailjs from 'emailjs-com';
 import AddForm from './AddForm';
 import { Tooltip } from '@material-ui/core';
