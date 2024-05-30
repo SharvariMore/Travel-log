@@ -19,8 +19,8 @@ export default function Testimonials() {
                     <div className="info">
                         <img src={avatarImage3} alt="" />
                         <div className="details">
-                            <h4>Customer 1</h4>
-                            <span>Review</span>
+                            <h4>Laurel Thomas</h4>
+                            <span>Atlanta, Georgia, USA</span>
                         </div>
                     </div>
                 </div>
@@ -31,20 +31,20 @@ export default function Testimonials() {
           <div className="info">
             <img src={avatarImage1} alt="" />
             <div className="details">
-              <h4>Customer 2</h4>
-              <span>Review</span>
+              <h4>Stephan Hubbard</h4>
+              <span>Glasgow, Scotland, UK</span>
             </div>
           </div>
         </div>
         <div className="testimonial">
           <p>
-            Cooperative person and had a Wonderful trip! Will visit India again and again.
+            Cooperative person and Wonderful trip! Will visit again.
           </p>
           <div className="info">
             <img src={avatarImage2} alt="" />
             <div className="details">
-              <h4>Customer 3</h4>
-              <span>Review</span>
+              <h4>Roberta Dell'Anno</h4>
+              <span>Boston, USA</span>
             </div>
           </div>
         </div>
@@ -58,6 +58,7 @@ const Section = styled.section`
   .title {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 18px
   }
   .testimonials {
     display: flex;
