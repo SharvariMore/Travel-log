@@ -50,7 +50,7 @@ export default function Recommend() {
         {
           image: Destination5,
           title: "Matheran",
-          subTitle: "Matheran, renowned as the tiniest hill station, is celebrated for its trekking, rock climbing, and other outdoor activities",
+          subTitle: "Matheran, renowned as the tiniest hill station, is celebrated for its trekking, rock climbing, and outdoor activities",
           cost: "1100 Rs",
           duration: "Approx 1 night trip",
           distance: "119 Kms",
@@ -58,7 +58,7 @@ export default function Recommend() {
         {
           image: Destination6,
           title: "Kolhapur",
-          subTitle: "Kolhapur, recognized for its deep historical and spiritual roots, is renowned for its temples, vibrant spice trade",
+          subTitle: "Kolhapur, recognized for its deep historical and spiritual roots, is renowned for its temples, vibrant spice",
           cost: "1100 Rs",
           duration: "Approx 2 night trip",
           distance: "233 Kms",
@@ -98,7 +98,7 @@ export default function Recommend() {
         {
           image: Destination11,
           title: "Ratnagiri",
-          subTitle: "Ratnagiri, a coastal town in Maharashtra renowned for its picturesque beaches and delicious mangoes",
+          subTitle: "Ratnagiri, a coastal town in Maharashtra renowned for its serene beaches and delicious mangoes",
           cost: "1200 Rs",
           duration: "Approx 2 night trip",
           distance: "303 Kms",
