@@ -12,16 +12,13 @@ import Destination9 from "../assets/sangli.jpg";
 import Destination10 from "../assets/Mahabaleshwar.jpg";
 import Destination11 from "../assets/Ratnagiri.jpg";
 import Destination12 from "../assets/Nashik.jpeg";
-import info1 from "../assets/info1.png";
-import info2 from "../assets/info2.png";
-import info3 from "../assets/info3.png";
 
 export default function Recommend() {
     const data = [
         {
           image: Destination1,
           title: "Pune",
-          subTitle: "Pune is known as 'Oxford of East' & is also the 2nd major IT hub ",
+          subTitle: "Pune, often referred to as the 'Oxford of the East', is also the second-largest IT hub in India",
           cost: "1000 Rs",
           duration: "Approx 1 night trip",
           distance: "154 Kms",
@@ -29,7 +26,7 @@ export default function Recommend() {
         {
           image: Destination2,
           title: "Mumbai",
-          subTitle: "Mumbai being the capital of Maharashtra is a cosmopolitan metropolis city",
+          subTitle: "Mumbai, capital of Maharashtra is a bustling cosmopolitan metropolis and heart of Bollywood industry",
           cost: "1000 Rs",
           duration: "Approx 1 night trip",
           distance: "154 Kms",
@@ -45,7 +42,7 @@ export default function Recommend() {
         {
           image: Destination4,
           title: "Lonavala",
-          subTitle: "Lonavala, a famous hill station also known as 'Jewel of Sahayadri' includes stunning waterfalls",
+          subTitle: "Lonavala, renowned as the 'Jewel of Sahayadri', is a popular hill station that boasts captivating waterfalls",
           cost: "1000 Rs",
           duration: "Approx 1 night trip",
           distance: "64 Kms",
@@ -53,7 +50,7 @@ export default function Recommend() {
         {
           image: Destination5,
           title: "Matheran",
-          subTitle: "Matheran, being the smallest hill station famous for trekking, rock climbing etc",
+          subTitle: "Matheran, renowned as the tiniest hill station, is celebrated for its trekking, rock climbing, and other outdoor activities",
           cost: "1100 Rs",
           duration: "Approx 1 night trip",
           distance: "119 Kms",
@@ -61,7 +58,7 @@ export default function Recommend() {
         {
           image: Destination6,
           title: "Kolhapur",
-          subTitle: "Kolhapur, being a historical & spiritual base is known for it's temples, spices etc",
+          subTitle: "Kolhapur, recognized for its deep historical and spiritual roots, is renowned for its temples, vibrant spice trade",
           cost: "1100 Rs",
           duration: "Approx 2 night trip",
           distance: "233 Kms",
@@ -69,7 +66,7 @@ export default function Recommend() {
         {
           image: Destination7,
           title: "Shirdi",
-          subTitle: "Shirdi, being a major pilgrimage site is former home of revered spiritual leader Sai Baba",
+          subTitle: "Shirdi, renowned as a significant pilgrimage destination, is residence of the esteemed spiritual leader Sai Baba",
           cost: "1200 Rs",
           duration: "Approx 1 night trip",
           distance: "184 Kms",
@@ -77,7 +74,7 @@ export default function Recommend() {
         {
           image: Destination8,
           title: "Solapur",
-          subTitle: "Solapur, is a spiritual quest developed as a commercial center for cotton and other agricultural produce",
+          subTitle: "Solapur, evolving from a spiritual center, emerged as a commercial hub for cotton and agricultural commodities",
           cost: "1200 Rs",
           duration: "Approx 2 night trip",
           distance: "254 Kms",
@@ -85,7 +82,7 @@ export default function Recommend() {
         {
           image: Destination9,
           title: "Sangli",
-          subTitle: "Sangli, being the lifeline of Krishna river is known as the Turmeric city and the Sugar Belt of India",
+          subTitle: "Sangli, known as the Turmeric City and the Sugar Belt of India, serves as the lifeline of the Krishna River",
           cost: "1100 Rs",
           duration: "Approx 2 night trip",
           distance: "233 Kms",
@@ -93,7 +90,7 @@ export default function Recommend() {
         {
           image: Destination10,
           title: "Mahabaleshwar",
-          subTitle: "Mahabaleshwar, a hill station in Western Ghats is famous for its Strawberries, Mulberries and carrots",
+          subTitle: "Mahabaleshwar, a hill station in Western Ghats, is renowned for its strawberries, mulberries, and carrots",
           cost: "900 Rs",
           duration: "Approx 1 night trip",
           distance: "120 Kms",
@@ -101,7 +98,7 @@ export default function Recommend() {
         {
           image: Destination11,
           title: "Ratnagiri",
-          subTitle: "Ratnagiri, a port town in Maharashtra famous for its scenic beaches & mangoes",
+          subTitle: "Ratnagiri, a coastal town in Maharashtra renowned for its picturesque beaches and delicious mangoes",
           cost: "1200 Rs",
           duration: "Approx 2 night trip",
           distance: "303 Kms",
@@ -109,19 +106,19 @@ export default function Recommend() {
         {
           image: Destination12,
           title: "Nashik",
-          subTitle: "Nashik, being a ancient holy city in Maharashtra is perfect wine tasting destination",
+          subTitle: "Nashik, an ancient sacred city in Maharashtra, offers an ideal setting for wine tasting experiences",
           cost: "1100 Rs",
           duration: "Approx 2 night trip",
           distance: "211 Kms",
         },
       ];
     
-      const packages = [
-        "The Weekend Break",
-        "The Package Holiday",
-        "The Group Tour",
-        "Long Term Slow Travel",
-      ];
+      // const packages = [
+      //   "The Weekend Break",
+      //   "The Package Holiday",
+      //   "The Group Tour",
+      //   "Long Term Slow Travel",
+      // ];
 
       const [active, setActive] = useState(1);
     
@@ -129,10 +126,10 @@ export default function Recommend() {
     <>
         <Section id="recommend">
             <div className="title">
-                <h2>Recommend Destinations <span>&#9970;</span></h2>
+                <h2>Recommended Destinations <span>&#9970;</span></h2>
             </div>
             <div className="packages">          {/*Set blue line below when clicked/switched on that particular package number*/}
-                <ul>
+                {/* <ul>
                     {
                         packages.map((pkg,index) => {
                             return (
@@ -142,7 +139,7 @@ export default function Recommend() {
                                 </li> 
                             );
                         })}
-                </ul>
+                </ul> */}
             </div>
                 <div className="destinations">
                     {data.map((destination) => {
@@ -151,15 +148,6 @@ export default function Recommend() {
                             <img src={destination.image} alt="Destination Image" />
                             <h3>{destination.title}</h3>
                             <p>{destination.subTitle}</p>
-                            <div className="info">
-                               <div className="services">
-                                    <img src={info1} alt="" />
-                                    <img src={info2} alt="" />
-                                    <img src={info3} alt="" />
-                                </div>
-                                
-                            </div>
-                           
                         </div>
                         );
                     })}
@@ -175,6 +163,7 @@ const Section = styled.section`
   padding: 2rem 0;
   .title {
     text-align: center;
+    font-size: 18px
   }
   .packages {
     display: flex;
